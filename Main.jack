@@ -1,0 +1,32 @@
+class Main {
+    function void main() {
+        var Queue t;
+let t = Queue.new(5);
+do t.Enqueue(1);
+do Output.printInt(t.Front());
+do Output.println();
+do t.Dequeue();
+do t.Enqueue(2);
+do Output.printInt(t.Front());
+do Output.println();
+do t.Enqueue(3);
+do t.Enqueue(4);
+do t.Enqueue(5);
+do t.Enqueue(6);
+do Output.printInt(t.Rear());
+do Output.println();
+do t.Enqueue(8);
+do Output.println();
+do t.Dequeue();
+do t.Dequeue();
+do t.Dequeue();
+do t.Dequeue();
+do t.Dequeue();
+do t.Dequeue();
+if(t.Front()=-1) {
+do Output.printString("Queue is empty");
+}
+        return;
+    }
+
+}

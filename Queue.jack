@@ -1,0 +1,79 @@
+class Queue {
+    field Array arr;
+    field int front,rear;
+    field int capacity;
+
+    constructor Queue new(int len) {
+        let arr = Array.new(len);
+        let front = 0;
+        let rear = 0;
+        let capacity = len;
+        return this;
+    }
+
+    method void Enqueue(int value) {
+
+        if(isFull()){
+do Output.printString("Queue is Full");
+        return;
+    }
+        let arr[rear] = value;
+        let rear = rear + 1;
+        return;
+    }
+
+    method int Dequeue() {
+        var int temp;
+        var Array Arr;
+        var int i;
+
+        if (isEmpty()) {
+            return -1;
+        }
+
+        let temp = arr[0];
+        let Arr = Array.new(capacity);
+        let i = 0;
+        while (i < capacity) {
+            let Arr[i] = arr[i];
+            let i = i + 1;
+        }
+
+        let i = 1;
+        while (i < capacity) {
+            let arr[i - 1] = arr[i];
+            let i = i + 1;
+        }
+
+        let rear = rear- 1;
+        return temp;
+    }
+
+    method bool isEmpty() {
+        return front = rear;
+    }
+
+    method int capacity() {
+        return rear;
+    }
+
+    method int Front() {
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return arr[0];
+    }
+    method int Rear() {
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return arr[capacity-1];
+        }
+
+    method int isFull() {
+        return capacity = rear;
+    }
+
+}
